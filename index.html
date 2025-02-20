@@ -15,21 +15,29 @@
 			<img src="assets/img/guy-holding-creatine.webp" alt="">
 		</div>
 		<div class="signup-form">
-			<form id="signupForm">
-				<div>
-					<p>Nome todo</p>
-					<input type="name" name="name" placeholder="John Doe">
-				</div>
-				<div>
-					<p>Email</p>
-					<input type="email" name="email" placeholder="johndoe@gmail.com">
-				</div>
-				<div>
-					<p>Telefone</p>
-					<input type="phone" name="phone" placeholder="(21) 99999-9999">
-				</div>
-				<button onclick="signupForm.submit()">Cadastrar</button>
-			</form>
+			<div class="signup-form-wrapper">
+				<h1>Cadaste-se agora e ganhe!</h1>
+				<p class="signup-form-description">Cupom de 30% de desconto na primeira hora da conta.</p>
+				<form id="signupForm">
+					<div>
+						<p>Nome todo</p>
+						<input type="name" name="name" placeholder="John Doe">
+					</div>
+					<div>
+						<p>Email</p>
+						<input type="email" name="email" placeholder="johndoe@gmail.com">
+					</div>
+					<div>
+						<p>Telefone</p>
+						<input type="phone" name="phone" placeholder="(21) 99999-9999">
+					</div>
+					<p class="privacy-policy">
+						Respeitamos seus dados. Ao enviar este formulário, você concorda que
+						entraremos em contato com você em relação a nossos produtos e serviços,
+						de acordo com nossa <a href="#">política de privacidade</a>.</p>
+					<button onclick="signupForm.submit()">Cadastrar</button>
+				</form>
+			</div>
 		</div>
 	</div>
 
@@ -69,11 +77,11 @@
 				<h1>Saudações, <span id="user-greetings"></span>!</h1>
 				<p>Aproveite uma promoção especial da Vitafor por tempo limitado!</p>
 				<p>Ganhe 10% de desconto na sua primeira compra.</p>
-				<button>Não quero perder!</button>
 				<div class="timer-wrapper">
 					<p>Tempo até o <strong>final da promoção</strong></p>
 					<div id="timerDisplay" class="timer-display">00:00</div>
 				</div>
+				<button>Não quero perder!</button>
 			</div>
 			<div class="darker-banner"></div>
 			<img src="assets/img/banner.webp" class="banner" alt="banner">
