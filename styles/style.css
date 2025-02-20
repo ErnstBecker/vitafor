@@ -5,6 +5,7 @@
 @import '/styles/footer.css';
 @import '/styles/navbar.css';
 @import '/styles/menu.css';
+@import '/styles/products.css';
 
 :root {
 	--font-family: "Roboto", serif;

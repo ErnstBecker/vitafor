@@ -118,3 +118,63 @@ export function initCarousel() {
 	}
 	window.addEventListener('resize', updateCarouselDimensions);
 }
+
+(function() {
+  const carousel = document.querySelector('.products-carousel');
+  if (!carousel) return;
+  const track = carousel.querySelector('.carousel-track');
+  const prevBtn = carousel.querySelector('.carousel-btn.prev');
+  const nextBtn = carousel.querySelector('.carousel-btn.next');
+  const items = track.children;
+  if (!items.length) return;
+  let itemWidth = items[0].getBoundingClientRect().width;
+
+  function slide(direction) {
+    if (direction === 'next') {
+      track.style.transition = 'transform 0.5s ease';
+      track.style.transform = `translateX(-${itemWidth}px)`;
+      track.addEventListener('transitionend', () => {
+        track.style.transition = 'none';
+        track.appendChild(track.firstElementChild);
+        track.style.transform = 'translateX(0)';
+      }, { once: true });
+    } else {
+      // Rearrange items para o efeito "infinito"
+      track.style.transition = 'none';
+      track.insertBefore(track.lastElementChild, track.firstElementChild);
+      track.style.transform = `translateX(-${itemWidth}px)`;
+
+      // Força reflow
+      track.offsetHeight;
+
+      track.style.transition = 'transform 0.5s ease';
+      track.style.transform = 'translateX(0)';
+    }
+  }
+
+  nextBtn.addEventListener('click', () => slide('next'));
+  prevBtn.addEventListener('click', () => slide('prev'));
+
+  // Modal logic: abre ao clicar num item do carousel
+  const modal = document.getElementById('productModal');
+  const modalImage = document.getElementById('modalImage');
+  const closeBtn = modal.querySelector('.close-btn');
+
+  track.addEventListener('click', (event) => {
+    const target = event.target.closest('.carousel-item');
+    if(target) {
+      modalImage.src = target.src;
+      modal.style.display = 'flex';
+    }
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+})();

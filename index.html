@@ -16,9 +16,9 @@
 		</div>
 		<div class="signup-form">
 			<div class="signup-form-wrapper">
-				<h1>Cadaste-se agora e ganhe!</h1>
+				<h1>Cadastre-se agora e ganhe!</h1>
 				<p class="signup-form-description">Cupom de 30% de desconto na primeira hora da conta.</p>
-				<form id="signupForm">
+				<form id="signupForm" method="get">
 					<div>
 						<p>Nome todo</p>
 						<input type="name" name="name" placeholder="John Doe">
@@ -117,6 +117,34 @@
 		<section class="section-science">
 			<img src="assets/img/science.webp" class="science-image" alt="">
 		</section>
+
+		<!-- Products Section -->
+		<section class="section-products">
+			<div class="products-carousel">
+				<button class="carousel-btn prev">
+					<img src="assets/svg/left-arrow.svg" alt="left">
+				</button>
+				<div class="carousel-track">
+					<!-- Os itens do carousel -->
+					<img src="assets/products/product1.webp" alt="" class="carousel-item">
+					<img src="assets/products/product2.webp" alt="" class="carousel-item">
+					<img src="assets/products/product3.webp" alt="" class="carousel-item">
+					<img src="assets/products/product4.webp" alt="" class="carousel-item">
+					<img src="assets/products/product5.webp" alt="" class="carousel-item">
+				</div>
+				<button class="carousel-btn next">
+					<img src="assets/svg/right-arrow.svg" alt="right">
+				</button>
+			</div>
+		</section>
+
+		<!-- Modal para visualização do produto -->
+		<div class="modal" id="productModal">
+			<div class="modal-content">
+				<span class="close-btn">&times;</span>
+				<img src="" alt="Product Preview" id="modalImage">
+			</div>
+		</div>
 
 		<!-- Lifestyle Section -->
 		<section class="section-lifestyle">
