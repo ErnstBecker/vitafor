@@ -191,18 +191,6 @@ p > strong {
 	}
 }
 
-@media (max-width: 600px) {
-	.section-business {
-		padding: 40px 10px;
-	}
-	.section-business h2 {
-		font-size: 1.5rem;
-	}
-	.section-business p {
-		font-size: 0.9rem;
-	}
-}
-
 .carousel {
 	position: relative;
 	overflow: hidden;
@@ -284,12 +272,6 @@ p > strong {
     margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-    .about-product-wrapper {
-        flex-direction: column;
-        text-align: center;
-    }
-}
 
 @media (max-width: 768px) {
 	.greetings-promotion h1 {
@@ -297,5 +279,29 @@ p > strong {
 	}
 	.greetings-promotion p {
 		font-size: 1rem;
+	}
+
+	.about-product-wrapper {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.section-business {
+		padding: 40px 10px;
+	}
+	.section-business h2 {
+		font-size: 1.5rem;
+	}
+	.section-business p {
+		font-size: 0.9rem;
+	}
+
+	.section-lifestyle-text h2 {
+		font-size: 30px;
+		line-height: 1;
+		margin: 10px 0;
+	}
+	.section-lifestyle-text p {
+		font-size: 16px;
 	}
 }
