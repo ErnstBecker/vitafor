@@ -11,7 +11,7 @@ track.appendChild(firstClone);
 // Array of slides and define initial index for the first real slide
 slides = Array.from(track.children);
 let currentIndex = 1;
-const slideWidth = slides[0].offsetWidth;
+let slideWidth = slides[0].offsetWidth;
 
 // Adjust initial position without transition
 track.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
@@ -108,3 +108,11 @@ track.addEventListener('touchend', touchEnd);
 slides.forEach(slide => {
 	slide.addEventListener('dragstart', (e) => e.preventDefault());
 });
+
+// Function to update carousel dimensions
+function updateCarouselDimensions() {
+	slideWidth = slides[0].offsetWidth;
+	track.style.transition = 'none';
+	track.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+}
+window.addEventListener('resize', updateCarouselDimensions);
