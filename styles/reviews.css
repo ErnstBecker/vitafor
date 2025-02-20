@@ -1,0 +1,56 @@
+.carousel-reviews {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-reviews-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-reviews-card {
+  min-width: 200px;
+  margin: 0 10px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.carousel-reviews-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.carousel-reviews-card p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.carousel-reviews-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-reviews-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-reviews-btn img {
+  width: 30px;
+  height: 30px;
+}
