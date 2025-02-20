@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/reviews.css">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<title>Vitafor</title>
 </head>
@@ -170,6 +171,47 @@
 			</div>
 		</section>
 
+		 <!-- Reviews Section -->
+		<section class="reviews-section">
+			<h2 class="reviews-title">Reviews</h2>
+			<div class="reviews-carousel-wrapper">
+				<button id="prevReview" class="review-nav-btn">‹</button>
+				<div class="reviews-carousel">
+					<!-- 1 review -->
+					<article class="review-card">
+						<img src="assets/white-man.webp" alt="User 1">
+						<h3 class="review-name">João Silva</h3>
+						<p class="review-message">"Ótimo produto, recomendo!"</p>
+					</article>
+					<!-- 2 review -->
+					<article class="review-card">
+						<img src="assets/white-woman.webp" alt="User 2">
+						<h3 class="review-name">Mary Chandler</h3>
+						<p class="review-message">"Mudou minha vida!"</p>
+					</article>
+					<!-- 3 review -->
+					<article class="review-card">
+						<img src="assets/white-woman.webp" alt="User 2">
+						<h3 class="review-name">Dustin Butler</h3>
+						<p class="review-message">"Mudou minha vida!"</p>
+					</article>
+					<!-- 4 review -->
+					<article class="review-card">
+						<img src="assets/white-woman.webp" alt="User 2">
+						<h3 class="review-name">Lina Cobb</h3>
+						<p class="review-message">"Mudou minha vida!"</p>
+					</article>
+					<!-- 5 review -->
+					<article class="review-card">
+						<img src="assets/white-woman.webp" alt="User 2">
+						<h3 class="review-name">Mable Ramsey</h3>
+						<p class="review-message">"Mudou minha vida!"</p>
+					</article>
+				</div>
+				<button id="nextReview" class="review-nav-btn">›</button>
+			</div>
+		</section>
+
 		<!-- Footer -->
 		<footer class="footer">
 			<div class="footer-mail">
@@ -242,6 +284,8 @@
 			<p class="copyright">© 2025 Vitafor. Todos os direitos reservados.</p>
 		</footer>
 	</div>
+	<!-- Scripts -->
+	<script type="module" src="scripts/modules/initReviews.js"></script>
 	<script type="module" src="scripts/main.js"></script>
 </body>
 </html>
