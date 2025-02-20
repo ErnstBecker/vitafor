@@ -237,3 +237,41 @@ p > strong {
 		padding: 5px;
 	}
 }
+
+/* New styling for About Product Section */
+.section-about-product {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+.about-product-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.about-product-image-wrapper,
+.about-product-text {
+    flex: 1 1 300px;
+}
+.about-product-image-wrapper {
+    text-align: center;
+}
+.about-product-image {
+    max-width: 100%;
+    height: auto;
+}
+.about-product-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.about-product-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+    .about-product-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+}
