@@ -20,6 +20,7 @@
 /* This is necessary to fix the navbar */
 body {
 	padding-top: 102px;
+	overflow-x: hidden !important;
 }
 
 * {
