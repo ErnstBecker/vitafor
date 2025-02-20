@@ -130,20 +130,27 @@
 }
 
 .footer-grid {
+	margin-top: 10px;
 	color: #fff;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
-.footer-grid ul {
-	padding: 0;
-}
-
-.footer-grid ul li {
+.footer-grid ul li a {
 	font-weight: 400;
-	font-size: 1rem;
-	line-height: 1.6;
+	color: #fff;
+}
+
+.footer-grid h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .copyright {
