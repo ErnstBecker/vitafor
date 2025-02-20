@@ -56,9 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('name', nameValue);
         localStorage.setItem('email', emailValue);
         localStorage.setItem('phone', phoneInput.value);
-        console.log('Signup data saved in localStorage.');
       } else {
-        console.log('Validation failed. Please check your inputs.');
+				throw new Error('Validation failed. Please check your inputs.');
       }
     });
   }
