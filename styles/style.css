@@ -49,3 +49,51 @@ a {
   color: var(--primary-color);
   text-decoration: none;
 }
+
+.footer-mail-form {
+	width: 100%;
+  display: flex;
+  flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer-mail-form input {
+	width: 100%;
+	max-width: 300px;
+}
+
+@media (max-width: 960px) {
+  .footer-mail-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer-mail-form input,
+  .footer-mail-form button {
+		margin: 0;
+    width: 100%;
+		max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+	.footer-content-style {
+		display: none;
+	}
+
+	.footer-mail-form h2 {
+		color: #fff;
+		line-height: 0.7;
+	}
+
+	.footer-mail-form p {
+		color: #fff;
+		font-size: 10px;
+	}
+}
+
+@media (min-width: 768px) {
+	.footer-mail-form h2, .footer-mail-form p {
+		display: none;
+	}
+}
