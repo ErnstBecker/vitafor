@@ -1,6 +1,9 @@
 .section-home {
 	display: flex;
 	position: relative;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 }
 
 .darker-banner {
@@ -22,7 +25,19 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	z-index: 1;
+}
+
+.greetings-promotion h1 {
+	font-size: 3rem;
+	margin-bottom: 10px;
+}
+
+.greetings-promotion p {
+	font-size: 1.2rem;
+	max-width: 90%;
+	margin: 0 auto 10px;
 }
 
 .greetings-promotion p {
@@ -268,9 +283,19 @@ p > strong {
     line-height: 1.5;
     margin-bottom: 10px;
 }
+
 @media (max-width: 768px) {
     .about-product-wrapper {
         flex-direction: column;
         text-align: center;
     }
+}
+
+@media (max-width: 768px) {
+	.greetings-promotion h1 {
+		font-size: 2rem;
+	}
+	.greetings-promotion p {
+		font-size: 1rem;
+	}
 }
