@@ -1,0 +1,86 @@
+.signup-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 900;
+	background: #8d8b8b;
+	display: flex;
+}
+
+.signup-image{
+	position: relative;
+}
+
+.signup-image-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000000b0;
+}
+
+.signup-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.signup-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: auto;
+}
+
+.signup-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: auto; /* removido width: 100% */
+	height: 100%;
+}
+
+.signup-form form {
+	width: 100%;
+	max-width: 400px;
+}
+
+.signup-form p {
+	font-size: 1.5rem;
+}
+
+.signup-form input, .signup-form button {
+	font-size: 1.3rem;
+	width: 400px;
+	padding: 0 20px;
+	border: 3px solid #0000;
+	border-radius: 5px;
+	height: 60px;
+	margin-bottom: 12px;
+}
+
+.signup-form button {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #fff;
+	background-color: var(--accent);
+	cursor: pointer;
+}
+
+.signup-form button:hover  {
+	background-color: var(--darker-accent);
+	color: #fff;
+}
+
+.signup-form input:focus {
+	outline: none;
+}
+
+@media (max-width: 768px) {
+
+}
