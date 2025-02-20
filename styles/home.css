@@ -153,10 +153,10 @@
 	pointer-events: none;
 }
 .carousel-btn {
-	background: rgba(0,0,0,0.5);
+	background: #0000;
 	border: none;
-	color: #fff;
-	padding: 10px;
+	color: #ffff;
+	padding: 20px;
 	pointer-events: all;
 	cursor: pointer;
 }
