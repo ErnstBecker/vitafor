@@ -1,49 +1,239 @@
-/* Import google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import '/styles/signup.css';
-@import '/styles/home.css';
-@import '/styles/footer.css';
-@import '/styles/navbar.css';
-
-:root {
-	--font-family: "Roboto", serif;
-	--background-color: #fff;
-  --accent: #c4161c;
-  --darker-accent: #a01414;
-	--primary-color: #1f1f1f;
-	--quaternary-color: #BDBDBD;
-	--sextanary-color: #F2F2F2;
-	--footer-background: #731f1f;
+.section-home {
+	display: flex;
+	position: relative;
 }
 
-/* This is necessary to fix the navbar */
-body {
-	padding-top: 102px;
+.darker-banner {
+	background-color: #000000a1;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 0;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.greetings-promotion {
+	color: #fff;
+	padding: 20px;
+	position: absolute;
+	font-size: 44px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
 }
 
-html, body {
-	overflow-x: hidden;
-	background-color: var(--background-color);
-  font-family: var(--font-family);
-	color: var(--primary-color);
-  line-height: 1.6;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  margin: 0;
+.greetings-promotion p {
+	font-size: 24px;
+	color: #fff;
 }
 
-li {
-	list-style: none;
+.greetings-promotion button {
+	margin: 42px 0;
+	background-color: var(--accent);
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 30px;
+	font-size: 16px;
+	font-weight: 700;
+	cursor: pointer;
 }
 
-a {
-  color: var(--primary-color);
-  text-decoration: none;
+.greetings-promotion button:hover {
+	background-color: var(--darker-accent);
+}
+
+.timer-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.timer-wrapper p {
+	font-size: 26px;
+}
+
+p > strong {
+	font-weight: 800;
+	color: var(--accent);
+}
+
+.timer-display {
+	font-size: 60px;
+	color: var(--accent);
+}
+
+
+.section-lifestyle {
+	font-weight: 400;
+	height: 500px;
+	margin-top: 50px;
+	background-color: #121212;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-lifestyle-text {
+	border-radius: 30px;
+	background-color: #fff;
+	height: 350px;
+	width: auto;
+	margin-left: 20px;
+	margin-right: 20px;
+	flex-direction: column;
+	padding: 10px 20px 0 20px;
+	overflow-wrap: break-word;
+}
+
+.section-lifestyle-text h2 {
+	margin: 3% 30% 0 0;
+	font-family: "Montserrat", serif;
+	font-weight: 800;
+	font-size: 40px;
+	line-height: 40px;
+	color: #9c9595;
+}
+
+.section-lifestyle-text p {
+	margin: 0 10% 0 0;
+}
+
+@media (max-width: 768px) {
+	.section-lifestyle img {
+		display: none;
+	}
+	.section-lifestyle-text {
+		display: flex;
+	}
+}
+
+@media (min-width: 768px) {
+	.section-lifestyle img {
+		display: block;
+	}
+	.section-lifestyle-text {
+		display: none;
+	}
+}
+
+.section-science {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.science-image {
+	width: 100%;
+	height: auto;
+}
+
+.section-business {
+	padding: 60px 20px;
+	background-color: #f9f9f9;
+	text-align: left;
+}
+
+.section-business .business-content {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.business-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.business-text {
+	flex: 1;
+}
+
+.business-image-wrapper {
+	flex: 1;
+	text-align: center;
+}
+
+.business-image {
+	width: 80%;
+	max-width: 300px;
+}
+
+@media (max-width: 800px) {
+	.business-wrapper {
+		flex-direction: column;
+		text-align: center;
+	}
+	/* Updated business-image size to prevent it from getting too small */
+	.business-image {
+		width: 100%;
+		max-width: 300px;
+	}
+}
+
+@media (max-width: 600px) {
+	.section-business {
+		padding: 40px 10px;
+	}
+	.section-business h2 {
+		font-size: 1.5rem;
+	}
+	.section-business p {
+		font-size: 0.9rem;
+	}
+}
+
+.carousel {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	margin: 20px auto;
+}
+.carousel-track {
+	display: flex;
+	transition: transform 0.3s ease;
+	cursor: grab;
+}
+
+.carousel-track.dragging {
+	cursor: grabbing;
+}
+
+.carousel-image {
+	border-radius: 25px;
+	padding: 10px;
+	width: 100%;
+	flex-shrink: 0;
+	object-fit: cover;
+}
+
+.carousel-nav {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	transform: translateY(-50%);
+	pointer-events: none;
+}
+
+.carousel-btn {
+	background: #0000;
+	border: none;
+	color: #ffff;
+	padding: 20px;
+	pointer-events: all;
+	cursor: pointer;
+}
+
+@media (max-width: 600px) {
+	.carousel-btn {
+		padding: 5px;
+	}
 }
