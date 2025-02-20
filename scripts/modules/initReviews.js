@@ -13,38 +13,36 @@ function updateCarousel() {
 
 nextButton.addEventListener('click', () => {
   if (currentIndex < cards.length - 1) {
-    currentIndex++; // Avança para o próximo card
+    currentIndex++;
   } else {
-    // Se estiver no último card, volta ao início sem animação
     track.style.transition = 'none';
-    track.appendChild(track.firstElementChild); // Move o primeiro card para o final
-    currentIndex--; // Ajusta o índice para manter a posição correta
-    updateCarousel(); // Atualiza o carrossel sem animação
+    track.appendChild(track.firstElementChild);
+    currentIndex--;
+    updateCarousel();
     setTimeout(() => {
-      track.style.transition = 'transform 0.5s ease'; // Reativa a transição
-      currentIndex++; // Avança para o próximo card (agora o primeiro)
-      updateCarousel(); // Atualiza o carrossel com animação
+      track.style.transition = 'transform 0.5s ease';
+      currentIndex++;
+      updateCarousel();
     }, 50);
-    return; // Sai da função para evitar a execução duplicada
+    return;
   }
   updateCarousel();
 });
 
 prevButton.addEventListener('click', () => {
   if (currentIndex > 0) {
-    currentIndex--; // Volta para o card anterior
+    currentIndex--;
   } else {
-    // Se estiver no primeiro card, move o último card para o início sem animação
     track.style.transition = 'none';
-    track.insertBefore(track.lastElementChild, track.firstElementChild); // Move o último card para o início
-    currentIndex++; // Ajusta o índice para manter a posição correta
-    updateCarousel(); // Atualiza o carrossel sem animação
+    track.insertBefore(track.lastElementChild, track.firstElementChild);
+    currentIndex++;
+    updateCarousel();
     setTimeout(() => {
-      track.style.transition = 'transform 0.5s ease'; // Reativa a transição
-      currentIndex--; // Volta para o card anterior (agora o último)
-      updateCarousel(); // Atualiza o carrossel com animação
+      track.style.transition = 'transform 0.5s ease';
+      currentIndex--;
+      updateCarousel();
     }, 50);
-    return; // Sai da função para evitar a execução duplicada
+    return;
   }
   updateCarousel();
 });
