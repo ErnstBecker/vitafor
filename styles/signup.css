@@ -1,0 +1,28 @@
+.signup-page {
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	z-index: 9999;
+	background-color: var(--primary-color);
+}
+
+/* .img-content {
+
+} */
+
+.div-form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+input {
+	border: 1px solid #0000;
+}
+
+input::selection{
+	border: 1px solid var(--accent) ;
+}

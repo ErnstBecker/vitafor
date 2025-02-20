@@ -1,0 +1,153 @@
+.footer {
+	background-color: var(--footer-background);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-mail {
+	width: 100%;
+	height: 200px;
+	background-color: var(--accent);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+.footer-content-style {
+	background-color: var(--darker-accent);
+	height: 100%;
+	border-radius: 100px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-mail-text{
+	padding: 0 130px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+}
+
+.sendmail-svg {
+	height: 78px;
+	margin-right: 20px;
+}
+
+.footer-mail-text h2 {
+	font-family: "Montserrat", serif;
+	font-weight: 800;
+	font-size: 32px;
+	line-height: 39px;
+	margin-bottom: 15px;
+}
+
+.footer-mail-text p {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 10px;
+	margin-top: 0;
+}
+
+.footer-mail input, button {
+	font-size: 1rem;
+	border: none;
+	border-radius: 4px;
+	height: 57px;
+}
+
+.footer-mail input {
+	width: 300px;
+	font-weight: 400;
+	padding: 0 20px;
+}
+
+.footer-mail input:focus {
+	outline: none;
+}
+
+.footer-mail button {
+	margin-left: 8px;
+	background-color: #731f1f;
+	color: var(--quaternary-color);
+	font-weight: 700;
+	width: 136px;
+	cursor: pointer;
+}
+
+.footer-mail button:hover  {
+	background-color: #441111;
+	color: #fff;
+}
+
+.footer-mail button:active  {
+	background-color: #6e2121;
+	color: #fff;
+}
+
+.footer-full-content {
+	padding: 20px;
+}
+
+.footer-logo-and-social {
+	width: 95%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-logo-text {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 15px 0;
+}
+
+.footer-logo-text p {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 15px;
+	color: #fff;
+}
+
+.footer-logo-text p strong {
+    font-weight: 800;
+}
+
+.footer-social-icons ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.footer-line {
+	width: 95%;
+	border-bottom: 1px solid #fff;
+}
+
+.footer-grid {
+	color: #fff;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 50px;
+}
+
+.footer-grid ul {
+	padding: 0;
+}
+
+.footer-grid ul li {
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.6;
+}
+
+.copyright {
+	color: #fff;
+	text-align: center;
+	margin: 50px;
+}

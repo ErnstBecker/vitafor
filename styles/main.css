@@ -1,0 +1,42 @@
+/* Import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import '/styles/signup.css';
+@import '/styles/home.css';
+@import '/styles/footer.css';
+
+:root {
+	--font-family: "Roboto", serif;
+	--background-color: #fff;
+  --accent: #c4161c;
+  --darker-accent: #a01414;
+	--primary-color: #1f1f1f;
+	--quaternary-color: #BDBDBD;
+	--sextanary-color: #F2F2F2;
+	--footer-background: #731f1f;
+}
+
+/* This is necessary to fix the navbar */
+body {
+	padding-top: 102px;
+}
+
+html, body {
+	overflow-x: hidden;
+	background-color: var(--background-color);
+  font-family: var(--font-family);
+	color: var(--primary-color);
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
